@@ -45,5 +45,5 @@ def nearest_neighbor(target_vector, vectors):
         if maxVal < similarity:
             maxVal = similarity
             maxIndex = i
-    return maxIndex  # Return the index of the closest vector
+    return maxIndex - 1
     
