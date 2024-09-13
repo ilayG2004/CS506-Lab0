@@ -40,9 +40,9 @@ def nearest_neighbor(target_vector, vectors):
     '''
     maxVal = float('-inf')
     maxIndex = -1
-    for r in vectors:
+    for i, r in vectors:
         if (maxVal < cosine_similarity(r, target_vector)):
             maxVal = cosine_similarity(r, target_vector)
-            maxIndex = r
+            maxIndex = i
     return maxIndex
     
