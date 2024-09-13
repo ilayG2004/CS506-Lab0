@@ -16,16 +16,16 @@ def test_cosine_similarity():
     
     result = cosine_similarity(vector1, vector2)
     
-    expected_result = 0  # Cosine similarity between orthogonal vectors is 0
+    expected_result = 0
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
 def test_nearest_neighbor():
-    points = np.array([[1, 2], [3, 4], [5, 6]])
-    query_point = np.array([4, 4])
+    vectors = np.array([[1, 2], [3, 4], [5, 6]])
+    target_vector = np.array([4, 4])
     
-    result = nearest_neighbor(points, query_point)
+    result = nearest_neighbor(target_vector, vectors)
     
-    expected_index = 1  # The nearest neighbor to [4, 4] is [3, 4] at index 1
+    expected_index = 1
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
