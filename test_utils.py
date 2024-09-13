@@ -16,7 +16,7 @@ def test_cosine_similarity():
     
     result = cosine_similarity(vector1, vector2)
     
-    expected_result = 0
+    expected_result = 0  #Cosine similarity between orthogonal vectors 0
     
     assert np.isclose(result, expected_result), f"Expected {expected_result}, but got {result}"
 
@@ -26,6 +26,6 @@ def test_nearest_neighbor():
     
     result = nearest_neighbor(target_vector, vectors)
     
-    expected_index = 1
+    expected_index = 1  #Nearest neighbor to [4, 4] is [3, 4], which is at index 1
     
     assert result == expected_index, f"Expected index {expected_index}, but got {result}"
