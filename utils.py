@@ -8,7 +8,7 @@ def dot_product(v1, v2):
     return the scalar dor product of the two vectors.
     # Hint: use `np.dot`.
     '''
-    np.dot(v1,v2)
+    return np.dot(v1,v2)
     
 def cosine_similarity(v1, v2):
     '''
@@ -26,7 +26,7 @@ def cosine_similarity(v1, v2):
     
     # Hint: Use `dot_product` and `np.linalg.norm`.
     '''
-    (np.dot(v1,v2))/(np.linalg.norm(v1) * np.linalg.norm(v2))
+    return (np.dot(v1,v2))/(np.linalg.norm(v1) * np.linalg.norm(v2))
     
 def nearest_neighbor(target_vector, vectors):
     '''
