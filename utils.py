@@ -40,9 +40,10 @@ def nearest_neighbor(target_vector, vectors):
     '''
     maxVal = float('-inf')
     maxIndex = -1
-    for i, r in vectors:
-        if (maxVal < cosine_similarity(r, target_vector)):
-            maxVal = cosine_similarity(r, target_vector)
+    for i, r in enumerate(vectors):
+        similarity = cosine_similarity(r, target_vector)
+        if maxVal < similarity:
+            maxVal = similarity
             maxIndex = i
-    return maxIndex
+    return maxIndex  # Return the index of the closest vector
     
